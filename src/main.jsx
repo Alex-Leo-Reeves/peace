@@ -12,7 +12,7 @@ function Root() {
     width: '100vw',
     minHeight: '100vh',
     backgroundImage,
-    backgroundPosition: 'center',
+    backgroundPosition: view === 'day1' ? 'center top' : 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
@@ -31,17 +31,16 @@ function Root() {
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundColor: view === 'day1' ? 'rgba(15, 23, 42, 0.32)' : 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: view === 'day1' ? 'rgba(15, 23, 42, 0.18)' : 'rgba(255, 255, 255, 0.08)',
     zIndex: 1,
     pointerEvents: 'none',
   };
 
   const cardStyle = {
     width: '100%',
-    maxWidth: '760px',
+    maxWidth: '840px',
     borderRadius: '28px',
     background: 'transparent',
-    backdropFilter: 'none',
     boxShadow: 'none',
     border: 'none',
     padding: 0,
@@ -51,9 +50,9 @@ function Root() {
 
   const buttonStyle = {
     fontFamily: 'Charm, serif',
-    fontSize: '1.15rem',
-    fontWeight: '700',
-    padding: '0.85rem 1.8rem',
+    fontSize: '1.05rem',
+    fontWeight: 700,
+    padding: '0.95rem 1.8rem',
     borderRadius: '9999px',
     border: 'none',
     cursor: 'pointer',
@@ -73,6 +72,7 @@ function Root() {
       ) : (
         <div style={screenStyle}>
           <div style={overlayStyle} />
+
           <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: 1000 }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <h1
@@ -80,10 +80,10 @@ function Root() {
                   fontFamily: 'Charm, serif',
                   fontSize: 'clamp(2.6rem, 5vw, 3.7rem)',
                   fontWeight: 900,
-                  color: '#111827',
+                  color: view === 'day1' ? '#ffffff' : '#111827',
                   letterSpacing: '0.15em',
                   margin: 0,
-                  textShadow: '0 2px 10px rgba(255, 255, 255, 0.95)',
+                  textShadow: view === 'day1' ? '0 2px 24px rgba(0,0,0,0.35)' : '0 2px 10px rgba(255,255,255,0.95)',
                 }}
               >
                 WELCOME PEACE
@@ -107,13 +107,7 @@ function Root() {
                   </button>
 
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-                    <p
-                      style={{
-                        ...textStyle,
-                        fontSize: 'clamp(2rem, 4vw, 2.4rem)',
-                        color: '#1f2937',
-                      }}
-                    >
+                    <p style={{ ...textStyle, fontSize: 'clamp(2rem, 4vw, 2.4rem)', color: '#1f2937' }}>
                       Are you ready?
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
