@@ -287,7 +287,7 @@ function Root() {
               {isDayView && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                   <div style={{ textAlign: 'center' }}>
-                    <p style={{ ...textStyle, color: currentDay.accent, fontSize: '1rem', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
+                    <p style={{ ...textStyle, color: view === 'day1' ? '#ffffff' : currentDay.accent, fontSize: '1rem', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
                       {currentDay.label}
                     </p>
                     <h2 style={{ fontFamily: 'Charm, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#ffffff', margin: 0 }}>
