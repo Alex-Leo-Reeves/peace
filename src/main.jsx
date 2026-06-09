@@ -26,7 +26,7 @@ function Root() {
     day2: {
       label: 'DAY 2',
       title: 'You caught my heart',
-      accent: '#3b82f6',
+      accent: '#60a5fa',
       description: [
         'Awwwnnn my beautiful Peace, I can\'t believe you can be this sweet 😂🥹. I saw you from afar and I was like "that is Peace, let me go and meet her," but you were walking too fast 😂. And then I wanted to shout your name but I was shy. Then I decided to walk faster, almost running till I finally caught up with you.',
         'And then you were na like "let me see the hair," then I showed you and you touched it and my heart started beating fast but I was happy sha. Anyway, then I wanted to just grab you and squeeze you 😂.',
@@ -37,7 +37,7 @@ function Root() {
     day3: {
       label: 'DAY 3',
       title: 'My heart was healed',
-      accent: '#ec4899',
+      accent: '#f472b6',
       description: [
         'Heyyyyy, I was so happy to give you my shirt. I hope you wear it every night before you sleep and every time you\'re cold. Anyway, I\'m so sorry about your hands. I hope the clothes you\'ll be washing today won\'t make it worse. Anyway, be fine dear.',
         'So then I saw you again entering keke. Then I shouted your name. Then you told me that you were going but you\'ll be back. Then I was na like "I will be going home soon." Every time you\'re always entering keke 😂. This fine girl can\'t trek.',
