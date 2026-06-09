@@ -252,10 +252,6 @@ function Root() {
                     </span>
                   </button>
 
-                  <p style={{ ...textStyle, color: '#475569', fontSize: '1rem' }}>
-                    Day 2 and Day 3 are now available and use the same picture from Day 1.
-                  </p>
-
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
                     <button
                       onClick={() => setView('start')}
