@@ -304,7 +304,7 @@ function Root() {
                   </div>
 
                   <a
-                    href="https://wa.link/cwbohz"
+                    href="https://wa.link/j8mu49"
                     target="_blank"
                     rel="noreferrer"
                     style={{

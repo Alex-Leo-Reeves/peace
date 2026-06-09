@@ -305,7 +305,7 @@ export default function Page() {
                 </button>
 
                 <a
-                  href="https://wa.link/oro2m8"
+                  href="https://wa.link/93l0cb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-lg rounded-full shadow-[0_12px_30px_rgba(24,24,27,0.25)] transition-all transform hover:scale-105 active:scale-95 inline-flex items-center gap-2 tracking-wide animate-pulse"
@@ -344,6 +344,17 @@ export default function Page() {
         <button className="fixed bottom-10 right-10 bg-gray-200/80 p-2 mb-2 rounded-full hover:bg-gray-300 backdrop-blur-sm z-50 shadow" onClick={toggleMute}>
           {isMuted ? <BsVolumeMuteFill size={26} /> : <BsVolumeUpFill size={26} />}
         </button>
+        {showFinalContent && (
+          <a
+            href="https://wa.link/93l0cb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-10 left-10 bg-black text-white px-5 py-3 rounded-full shadow-[0_12px_30px_rgba(0,0,0,0.35)] hover:bg-zinc-900 transition-all z-50"
+            style={{ fontFamily: 'Charm, serif', fontWeight: 700 }}
+          >
+            Message Peace
+          </a>
+        )}
         <Footer />
       </div>
     </>
