@@ -295,7 +295,7 @@ function Root() {
                     </h2>
                   </div>
 
-                  <div style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.18)', borderRadius: '24px', padding: '1.75rem', lineHeight: 1.8, color: '#f8fafc', fontSize: '1.02rem', boxShadow: '0 24px 60px rgba(0, 0, 0, 0.18)' }}>
+                  <div style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.18)', borderRadius: '24px', padding: '1.75rem', lineHeight: 1.8, color: currentDay.accent, fontSize: '1.02rem', boxShadow: '0 24px 60px rgba(0, 0, 0, 0.18)' }}>
                     {currentDay.description.map((paragraph, index) => (
                       <p key={index} style={{ marginTop: index === 0 ? 0 : '1rem' }}>
                         {paragraph}
