@@ -6,13 +6,54 @@ import './index.css';
 function Root() {
   const [view, setView] = useState('start');
 
-  const backgroundImage = view === 'day1' ? "url('/2.png')" : "url('/1.png')";
+  const dayViews = ['day1', 'day2', 'day3'];
+  const isDayView = dayViews.includes(view);
+  const currentDay = {
+    day1: {
+      label: 'DAY 1',
+      title: 'The first time I saw you',
+      accent: '#f9a8d4',
+      description: [
+        'As you know we meet today, I saw you at the entrance of ogb and I knew it was you immediately and you were looking so tall 😂 and beautiful, I like you.',
+        'I really do, I enjoyed our time spent today, I enjoyed watch Instagram with you and I was happy to use style to be holding your hands 😂 your hands are so fine and elegant and your fingers are so slim, sexy and tender.',
+        'I want to hold your hands forever, I mean it.',
+        'And I don\'t know you kept on making long faces whenever I complimented you 😂😂 but when I see you I must get that hug from you and give you that kick and let\'s meet next week Monday.',
+        'Sweet girl, you\'re so sweet and you really like walking fast 😂 and you\'re so slim and small I just feel like squeezing you 😫😫😫💓 anyway I\'m glad I was able to see you, you\'re so lovely and I\'m glad I held your hands and I don\'t know why you kept on bringing your lips close to my face for me to kiss 😂😂😂😂 I couldn\'t get enough out of looking at it you have fine pink lips I don\'t really think you need lip combo, please send me your video 🥺 muah 😚',
+        'I would be really happy if you did.',
+        'I noticed behind your stubbornness you\'re actually nice 😂 very very sweet actually, you have me your earpod 🥹 that\'s so sweet, you allowed me to sit close to you and let our legs touch 😂 but I was looking for your trouble with my leg sha anyway when you were leaving I was really sad and I was holding your hands I didn\'t want to let go of you 🥺 I wanted to pull you in for a hug but the ring of your hand stopped me I didn\'t want to injure you and you and your friends where shouting ahan ahan 😂😂 anyway sha let me know your reply.',
+      ],
+    },
+    day2: {
+      label: 'DAY 2',
+      title: 'You caught my heart',
+      accent: '#3b82f6',
+      description: [
+        'Awwwnnn my beautiful Peace, I can\'t believe you can be this sweet 😂🥹. I saw you from afar and I was like "that is Peace, let me go and meet her," but you were walking too fast 😂. And then I wanted to shout your name but I was shy. Then I decided to walk faster, almost running till I finally caught up with you.',
+        'And then you were na like "let me see the hair," then I showed you and you touched it and my heart started beating fast but I was happy sha. Anyway, then I wanted to just grab you and squeeze you 😂.',
+        'But before that, I saw you in keke going to coke villa. Then I shouted your name but you didn\'t answer. Then I just said let me leave it 😂. Then you came down and ran with your small legs to one brown benz. I was na like "no need to go and meet her" 😂.',
+        'Then I saw your text that you were going out. Anyway, I was happy to see you and hold your small fine yellow hands.',
+      ],
+    },
+    day3: {
+      label: 'DAY 3',
+      title: 'My heart was healed',
+      accent: '#ec4899',
+      description: [
+        'Heyyyyy, I was so happy to give you my shirt. I hope you wear it every night before you sleep and every time you\'re cold. Anyway, I\'m so sorry about your hands. I hope the clothes you\'ll be washing today won\'t make it worse. Anyway, be fine dear.',
+        'So then I saw you again entering keke. Then I shouted your name. Then you told me that you were going but you\'ll be back. Then I was na like "I will be going home soon." Every time you\'re always entering keke 😂. This fine girl can\'t trek.',
+        'And so the third time I saw you, it was from far actually. You were in front of ogb and then you na ran inside. So I ran too 😂 to come and see you. Then we spoke. My heart was healed from my pain. And then I held your hands 😂.',
+        'But you were looking so pretty. I am surprised your lipstick was still on your lips by that time. I thought it would have dried. Anyway, take care of yourself dear. Think about me always.',
+      ],
+    },
+  }[view] || {};
+
+  const backgroundImage = isDayView ? "url('/2.png')" : "url('/1.png')";
 
   const screenStyle = {
     width: '100vw',
     minHeight: '100vh',
     backgroundImage,
-    backgroundPosition: view === 'day1' ? 'center top' : 'center',
+    backgroundPosition: isDayView ? 'center top' : 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
@@ -171,8 +212,48 @@ function Root() {
                     </span>
                   </button>
 
+                  <button
+                    onClick={() => setView('day2')}
+                    style={{
+                      ...buttonStyle,
+                      width: '100%',
+                      textAlign: 'left',
+                      background: 'rgba(59, 130, 246, 0.1)',
+                      border: '1px solid rgba(59, 130, 246, 0.45)',
+                      color: '#1d4ed8',
+                      padding: '1.3rem 1.5rem',
+                    }}
+                  >
+                    <span style={{ display: 'block', fontSize: '0.9rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                      Day 2
+                    </span>
+                    <span style={{ fontFamily: 'Charm, serif', fontSize: '1.7rem', fontWeight: 900 }}>
+                      Another memory
+                    </span>
+                  </button>
+
+                  <button
+                    onClick={() => setView('day3')}
+                    style={{
+                      ...buttonStyle,
+                      width: '100%',
+                      textAlign: 'left',
+                      background: 'rgba(245, 158, 11, 0.1)',
+                      border: '1px solid rgba(245, 158, 11, 0.45)',
+                      color: '#b45309',
+                      padding: '1.3rem 1.5rem',
+                    }}
+                  >
+                    <span style={{ display: 'block', fontSize: '0.9rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                      Day 3
+                    </span>
+                    <span style={{ fontFamily: 'Charm, serif', fontSize: '1.7rem', fontWeight: 900 }}>
+                      One more day
+                    </span>
+                  </button>
+
                   <p style={{ ...textStyle, color: '#475569', fontSize: '1rem' }}>
-                    More days will be added soon, but for now, Day 1 holds the memories we just shared.
+                    Day 2 and Day 3 are now available and use the same picture from Day 1.
                   </p>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
@@ -203,25 +284,23 @@ function Root() {
                 </div>
               )}
 
-              {view === 'day1' && (
+              {isDayView && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                   <div style={{ textAlign: 'center' }}>
-                    <p style={{ ...textStyle, color: '#f9a8d4', fontSize: '1rem', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
-                      DAY 1
+                    <p style={{ ...textStyle, color: currentDay.accent, fontSize: '1rem', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
+                      {currentDay.label}
                     </p>
                     <h2 style={{ fontFamily: 'Charm, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#ffffff', margin: 0 }}>
-                      The first time I saw you
+                      {currentDay.title}
                     </h2>
                   </div>
 
                   <div style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.18)', borderRadius: '24px', padding: '1.75rem', lineHeight: 1.8, color: '#f8fafc', fontSize: '1.02rem', boxShadow: '0 24px 60px rgba(0, 0, 0, 0.18)' }}>
-                    <p>As you know we meet today, I saw you at the entrance of ogb and I knew it was you immediately and you were looking so tall 😂 and beautiful, I like you.</p>
-                    <p>I really do, I enjoyed our time spent today, I enjoyed watch Instagram with you and I was happy to use style to be holding your hands 😂 your hands are so fine and elegant and your fingers are so slim, sexy and tender.</p>
-                    <p>I want to hold your hands forever, I mean it.</p>
-                    <p>And I don't know you kept on making long faces whenever I complimented you 😂😂 but when I see you I must get that hug from you and give you that kick and let's meet next week Monday.</p>
-                    <p>Sweet girl, you're so sweet and you really like walking fast 😂 and you're so slim and small I just feel like squeezing you 😫😫😫💓 anyway I'm glad I was able to see you, you're so lovely and I'm glad I held your hands and I don't know why you kept on bringing your lips close to my face for me to kiss 😂😂😂😂 I couldn't get enough out of looking at it you have fine pink lips I don't really think you need lip combo, please send me your video 🥺 muah 😚</p>
-                    <p>I would be really happy if you did.</p>
-                    <p>I noticed behind your stubbornness you're actually nice 😂 very very sweet actually, you have me your earpod 🥹 that's so sweet, you allowed me to sit close to you and let our legs touch 😂 but I was looking for your trouble with my leg sha anyway when you were leaving I was really sad and I was holding your hands I didn't want to let go of you 🥺 I wanted to pull you in for a hug but the ring of your hand stopped me I didn't want to injure you and you and your friends where shouting ahan ahan 😂😂 anyway sha let me know your reply.</p>
+                    {currentDay.description.map((paragraph, index) => (
+                      <p key={index} style={{ marginTop: index === 0 ? 0 : '1rem' }}>
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
 
                   <a
